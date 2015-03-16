@@ -12,9 +12,9 @@ def slow_solution (a)
 end
 
 #
-# Quickiest solution than previous
+# Faster solution than previous
 #
-def quick_solution (a)
+def fast_solution (a)
   ary_sum_left = Array.new
   ary_sum_right = Array.new
   sum_left = 0
@@ -31,7 +31,7 @@ def quick_solution (a)
 
   Array.new.tap do |diff|
     ary_sum_left.each_with_index do |e, i|
-      diff <<  (e - ary_sum_right[ary_sum_right.length - i - 1]).abs
+      diff << (e - ary_sum_right[ary_sum_right.length - i - 1]).abs
     end
   end.min
 end
